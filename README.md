@@ -16,6 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 	- [Tech stack](#tech-stack)
 	- [Application improvements](#application-improvements)
 	- [Available Scripts](#available-scripts)
+		- [`npm install`](#npm-install)
 		- [`npm start`](#npm-start)
 		- [`npm test`](#npm-test)
 		- [`npm run build`](#npm-run-build)
@@ -90,6 +91,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Will install all app dependencies.
 
 ### `npm start`
 
