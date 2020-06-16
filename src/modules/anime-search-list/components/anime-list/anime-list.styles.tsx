@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AnimeListContainerStyles = styled.div`
+export const AnimeListWrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(5, 185px);
 	grid-template-rows: auto;

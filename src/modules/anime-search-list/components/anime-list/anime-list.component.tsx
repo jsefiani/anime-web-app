@@ -3,7 +3,7 @@ import * as React from "react";
 import { AnimeListComponentProps } from "./anime-list.types";
 import { Placeholder } from "toolbox";
 import {
-	AnimeListContainerStyles,
+	AnimeListWrapper,
 	AnimePlaceholderCard,
 	AnimeListTitle,
 } from "./anime-list.styles";
@@ -56,21 +56,21 @@ export const AnimeListComponent: React.FC<AnimeListComponentProps> = ({
 
 	return (
 		<>
-			<AnimeListContainerStyles>
+			<AnimeListWrapper>
 				<AnimeListTitle>
 					{!!totalAnimeSeries ? `${totalAnimeSeries} Results` : "Popular Anime"}
 				</AnimeListTitle>
 				{series.map((s, i) => (
 					<AnimeCardContainer
 						key={s.id}
-						refElement={series.length === i + 1 ? lastAnimeElementRef : null}
+						ref={series.length === i + 1 ? lastAnimeElementRef : null}
 						animeSerie={s}
 					/>
 				))}
 				{noResultsFound && <p>No results found.</p>}
 				{isLoading && renderPlaceHolderCards()}
 				<div>{error && "Error"}</div>
-			</AnimeListContainerStyles>
+			</AnimeListWrapper>
 		</>
 	);
 };
