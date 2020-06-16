@@ -2,15 +2,13 @@ import * as React from "react";
 
 import { LazyImage } from "toolbox";
 import { AnimeCardWrapper, AnimeCardImageWrapper } from "./anime-card.styles";
-import { AnimeCardComponentProps } from "./animer-card.types";
+import { AnimeCardComponentProps, AnimeCardRefProp } from "./anime-card.types";
 import { AnimeDetailsModalContainer } from "../anime-details-modal/anime-details-modal.container";
 
-export const AnimeCardComponent: React.FC<AnimeCardComponentProps> = ({
-	animeSerie,
-	refElement,
-	toggleModal,
-	isModalOpen,
-}) => {
+export const AnimeCardComponent = React.forwardRef<
+	AnimeCardRefProp,
+	AnimeCardComponentProps
+>(({ animeSerie, toggleModal, isModalOpen }, ref) => {
 	return (
 		<>
 			{isModalOpen && (
@@ -20,7 +18,7 @@ export const AnimeCardComponent: React.FC<AnimeCardComponentProps> = ({
 					animeId={animeSerie.id}
 				/>
 			)}
-			<AnimeCardWrapper ref={refElement} onClick={toggleModal}>
+			<AnimeCardWrapper ref={ref} onClick={toggleModal}>
 				<AnimeCardImageWrapper
 					as={LazyImage}
 					height={265}
@@ -31,4 +29,4 @@ export const AnimeCardComponent: React.FC<AnimeCardComponentProps> = ({
 			</AnimeCardWrapper>
 		</>
 	);
-};
+});

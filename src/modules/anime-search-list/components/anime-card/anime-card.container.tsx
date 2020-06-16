@@ -1,26 +1,21 @@
 import * as React from "react";
 
 import { AnimeCardComponent } from "./anime-card.component";
-import { AnimeSerie } from "../anime-list/anime-list.types";
 import { useModal } from "toolbox";
+import { AnimeCardRefProp, AnimeCardContainerProps } from "./anime-card.types";
 
-type AnimeCardContainerProps = {
-	animeSerie: AnimeSerie;
-	refElement: ((node: HTMLDivElement) => void) | null;
-};
-
-export const AnimeCardContainer: React.FC<AnimeCardContainerProps> = ({
-	animeSerie,
-	refElement,
-}) => {
+export const AnimeCardContainer = React.forwardRef<
+	AnimeCardRefProp,
+	AnimeCardContainerProps
+>(({ animeSerie }, ref) => {
 	const { isOpen, toggle } = useModal();
 
 	return (
 		<AnimeCardComponent
-			refElement={refElement}
+			ref={ref}
 			animeSerie={animeSerie}
 			toggleModal={toggle}
 			isModalOpen={isOpen}
 		/>
 	);
-};
+});
