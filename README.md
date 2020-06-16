@@ -73,7 +73,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Implement a loading state for buttons
 - Confirmation modal when deleting user account
 - Add default actions buttons to modal component
-- Use ref forwarding instead of prop drilling
+- Use ref forwarding for anime cards ✅
 - Use cached image when showing modal with Anime details
 - Use storybook to organize, document and build components in isolation
 - Theme app with Material UI's and styled components' theme provider
