@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useSnackbar, OptionsObject as NotiStackOptions } from "notistack";
 
 export const useToast = () => {
