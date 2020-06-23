@@ -27,7 +27,7 @@ export const AnimeDetailsModalContainer: React.FC<AnimeDetailsModalContainerProp
 
 	React.useEffect(() => {
 		fetchAnimeSerie({ variables: { id: animeId } });
-	});
+	}, [fetchAnimeSerie, animeId]);
 
 	return (
 		<AnimeDetailsModalComponent
