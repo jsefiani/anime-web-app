@@ -45,7 +45,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - src: source code
     - toolbox: small reusable components
     - modules: building blocks that are then composed and exported as a module. Each module has a components folder that stores the building blocks of the module.
-    - pages: complete pages that consist of modules
+    - pages: all components that represent a React route and are composed using multiple modules
     - utils: utilities that are used all over the app
 
 <a name="tech-stack"/>
