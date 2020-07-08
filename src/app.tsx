@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { HomePage } from "pages/home/home.page";
-import { ProfilePage } from "pages/profile/profile.page";
+import { HomePage } from "pages/home.page";
+import { ProfilePage } from "pages/profile.page";
 import { CssBaseline } from "@material-ui/core";
 import { SnackbarProvider } from "notistack";
 
