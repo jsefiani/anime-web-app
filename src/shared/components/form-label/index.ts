@@ -1,0 +1,1 @@
+export { withFormLabel } from "./FormLabel";

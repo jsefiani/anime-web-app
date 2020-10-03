@@ -1,0 +1,1 @@
+export { AnimeAccountDetailsFormContainer } from "./AnimeAccountDetailsFormContainer";

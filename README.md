@@ -43,10 +43,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - My App's architecture is inspired by the [atomic design methodology](https://danilowoz.com/blog/atomic-design-with-react), it consists of the following major folders:
   - build: contains optimized build for production
   - src: source code
-    - toolbox: small reusable components
-    - modules: building blocks that are then composed and exported as a module. Each module has a components folder that stores the building blocks of the module.
-    - pages: all components that represent a React route and are composed using multiple modules
-    - utils: utilities that are used all over the app
+    - shared: reusable UI components, constants and utils that are used all over the app
+    - pages: all components that represent a React route and are composed using multiple containers
+      - components (UI logic)
+      - containers (business logic)
+      - {pageName}Page.tsx
+		- layout: components specifically used for building a layout
 
 <a name="tech-stack"/>
 
